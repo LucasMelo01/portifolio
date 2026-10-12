@@ -1,0 +1,206 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #eef5fb;
+    color: #1f2d3d;
+    line-height: 1.6;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #1d5fa8;
+    padding: 18px 20px;
+    position: sticky;
+    top: 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Sobre mim */
+#sobre {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    padding: 60px 8%;
+}
+
+.sobre-foto img {
+    width: 320px;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 6px solid #ffffff;
+    box-shadow: 0 0 25px rgba(29, 95, 168, 0.35);
+}
+
+.sobre-texto {
+    max-width: 520px;
+}
+
+.saudacao {
+    font-size: 1.3rem;
+}
+
+.sobre-texto h1 {
+    font-size: 2.6rem;
+    line-height: 1.2;
+}
+
+.curso {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #1d5fa8;
+    margin: 8px 0 16px;
+}
+
+/* Projetos e contato (estilo simples por enquanto) */
+.secao {
+    padding: 40px 8%;
+}
+
+.secao h2 {
+    color: #1d5fa8;
+    margin-bottom: 12px;
+}
+
+.secao ul {
+    list-style: none;
+}
+
+.secao li {
+    margin-bottom: 16px;
+}
+
+.secao a {
+    color: #1d5fa8;
+}
+
+/* Projetos */
+#projetos {
+    background-color: #ffffff;
+    text-align: center;
+    padding: 50px 8%;
+}
+
+#projetos h2 {
+    font-size: 2.2rem;
+    margin-bottom: 32px;
+}
+
+.projetos-lista {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 24px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.card {
+    flex: 1 1 280px;
+    max-width: 340px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    background-color: #eef5fb;
+    border: 1px solid #c9dcef;
+    border-radius: 12px;
+    padding: 24px;
+}
+
+.card h3 {
+    font-size: 1.1rem;
+    color: #1d5fa8;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+}
+
+.card-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: auto;
+}
+
+.card .botao {
+    padding: 8px 18px;
+    border: 2px solid #1d5fa8;
+    border-radius: 20px;
+    background-color: #1d5fa8;
+    color: #ffffff;
+    font-size: 0.9rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.card .botao.contorno {
+    background-color: transparent;
+    color: #1d5fa8;
+}
+
+.card .botao:hover {
+    background-color: #17497f;
+    border-color: #17497f;
+    color: #ffffff;
+}
+
+
+/* Rodapé */
+footer {
+    background-color: #1d5fa8;
+    color: #ffffff;
+    text-align: center;
+    padding: 16px;
+}
+
+/* Celular e tablet */
+@media (max-width: 800px) {
+    nav ul {
+        gap: 20px;
+    }
+
+    #sobre {
+        flex-direction: column;
+        text-align: center;
+        gap: 28px;
+        padding: 40px 6%;
+    }
+
+    .sobre-foto img {
+        width: 240px;
+        height: 240px;
+    }
+
+    .sobre-texto h1 {
+        font-size: 2rem;
+    }
+}

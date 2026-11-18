@@ -7,76 +7,106 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
     <header>
-        <nav>
+        <nav aria-label="Navegação principal">
             <ul>
                 <li><a href="#sobre">Sobre Mim</a></li>
+                <li><a href="#formacao">Formação</a></li>
+                <li><a href="#conhecimentos">Conhecimentos</a></li>
                 <li><a href="#projetos">Projetos</a></li>
                 <li><a href="#contato">Contato</a></li>
             </ul>
         </nav>
     </header>
-
     <main>
-
-        <!-- Sobre Mim -->
-        <section id="sobre">
+        <!-- Apresentação -->
+        <section id="inicio" aria-labelledby="nome">
+            <div class="sobre-texto">
+                <p class="saudacao">Olá, eu sou</p>
+                <h1 id="nome">Lucas Melo</h1>
+                <p class="cargo">Desenvolvedor de Software</p>
+                <div class="hero-links">
+                    <a href="https://github.com/LucasMelo01" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    <span aria-hidden="true">/</span>
+                    <a href="mailto:lucasdasilvademelo01@gmail.com">E-mail</a>
+                    <span aria-hidden="true">/</span>
+                    <a href="https://www.linkedin.com/in/lucas-melo-300148248/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                </div>
+            </div>
             <div class="sobre-foto">
                 <img src="foto-lucas.jpg" alt="Foto de Lucas da Silva de Melo">
             </div>
-
-            <div class="sobre-texto">
-                <p class="saudacao">Olá, eu sou</p>
-                <h1>Lucas da Silva de Melo</h1>
-                <p class="curso">Estudante de Análise e Desenvolvimento de Sistemas</p>
-                <p>Olá! Me chamo Lucas e sou estudante de Tecnologia na FAESA.
-                    Tenho grande interesse no desenvolvimento de sistemas, redes de computadores
-                    e na construção de soluções web. Meu objetivo acadêmico é consolidar uma base sólida em programação
-                    e infraestrutura, aplicando na prática os conhecimentos adquiridos ao longo da graduação para evoluir como desenvolvedor.</p>
-            </div>
         </section>
-
+        <!-- Sobre mim -->
+        <section id="sobre" class="secao sobre-mim">
+            <h2>Sobre mim</h2>
+            <p>Sou estudante de Análise e Desenvolvimento de Sistemas na FAESA, com interesse em desenvolvimento de software, soluções web e redes de computadores. Busco aplicar meus conhecimentos na criação de soluções práticas e bem estruturadas, aprimorando continuamente minhas habilidades em programação e infraestrutura por meio de projetos.</p>
+        </section>
+        <div class="curriculo-grid">
+        <!-- Formação -->
+        <section id="formacao" class="curriculo-card">
+            <h2>Formação acadêmica</h2>
+            <ul class="formacao-lista">
+                <li>
+                    <h3>Análise e Desenvolvimento de Sistemas</h3>
+                    <p>FAESA — Ensino superior em andamento</p>
+                </li>
+            </ul>
+        </section>
+        <!-- Conhecimentos -->
+        <section id="conhecimentos" class="curriculo-card">
+            <h2>Conhecimentos</h2>
+            <ul class="conhecimentos-lista">
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>Git e GitHub</li>
+                <li>Python</li>
+                <li>Redes de computadores (em estudo)</li>
+            </ul>
+        </section>
+        </div>
         <!-- Projetos -->
         <section id="projetos" class="secao">
-            <h2>Projetos</h2>
-
+            <h2>Meus projetos</h2>
             <div class="projetos-lista">
                 <article class="card">
                     <h3>Projeto 1 - Sistema Web de segurança nas vias urbanas</h3>
                     <p>Este projeto tem como objetivo analisar dados relacionados à segurança nas vias urbanas a partir de um sistema Web que inclua painéis, relatórios, indicadores e KPIs para facilitar a tomada de decisão, buscando entender melhor sobre acidentes de trânsito que acontecem no Brasil através de dados.</p>
                     <div class="card-links">
-                        <a class="botao" href="https://eliaferreira.github.io/PROJETOINTEGRADOR3/" target="_blank">Ver site</a>
-                        <a class="botao contorno" href="https://github.com/eliaferreira/PROJETOINTEGRADOR3" target="_blank">Ver código</a>
+                        <a class="botao" href="https://eliaferreira.github.io/PROJETOINTEGRADOR3/" target="_blank" rel="noopener noreferrer">Ver site</a>
+                        <a class="botao contorno" href="https://github.com/eliaferreira/PROJETOINTEGRADOR3" target="_blank" rel="noopener noreferrer">Ver código</a>
                     </div>
                 </article>
-
                 <article class="card">
                     <h3>Projeto 2 - Portfólio HTML</h3>
                     <p>Criação de portfólio pessoal versionado no Git e hospedado no GitHub Pages.</p>
                     <div class="card-links">
-                        <a class="botao" href="https://lucasmelo01.github.io/portifolio/" target="_blank">Ver site</a>
-                        <a class="botao contorno" href="https://github.com/LucasMelo01/portifolio" target="_blank">Ver código</a>
+                        <a class="botao" href="https://lucasmelo01.github.io/portifolio/" target="_blank" rel="noopener noreferrer">Ver site</a>
+                        <a class="botao contorno" href="https://github.com/LucasMelo01/portifolio" target="_blank" rel="noopener noreferrer">Ver código</a>
+                    </div>
+                </article>
+                <article class="card">
+                    <h3>Projeto 3 - RAG Distribuído em Microsserviços</h3>
+                    <p>Sistema distribuído desenvolvido em equipe para responder perguntas com base em documentos, utilizando Python, FastAPI, Redis e Docker. Minha contribuição foi o desenvolvimento do serviço de recuperação de informações, com busca por similaridade e testes automatizados.</p>
+                    <div class="card-links">
+                        <a class="botao contorno" href="https://github.com/tiagoarrigoni/FAESA-SD-C2A2" target="_blank" rel="noopener noreferrer">Ver código</a>
                     </div>
                 </article>
             </div>
         </section>
-
         <!-- Contato -->
         <section id="contato" class="secao">
             <h2>Contato</h2>
             <p>Fale comigo através dos links abaixo:</p>
             <ul>
                 <li>Email: <a href="mailto:lucasdasilvademelo01@gmail.com">lucasdasilvademelo01@gmail.com</a></li>
-                <li>GitHub: <a href="https://github.com/LucasMelo01" target="_blank">github.com/LucasMelo01</a></li>
+                <li>GitHub: <a href="https://github.com/LucasMelo01" target="_blank" rel="noopener noreferrer">github.com/LucasMelo01</a></li>
+                <!-- Adicione aqui o link do seu perfil pessoal no LinkedIn quando confirmado. -->
             </ul>
         </section>
-
     </main>
-
     <footer>
         <p>&copy; 2026 - Desenvolvido por Lucas da Silva de Melo.</p>
     </footer>
-
 </body>
 </html>

@@ -3,115 +3,136 @@
     padding: 0;
     box-sizing: border-box;
 }
-
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 110px;
 }
-
 body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: #eef5fb;
     color: #1f2d3d;
     line-height: 1.6;
 }
-
 /* Cabeçalho */
 header {
     background-color: #1d5fa8;
     padding: 18px 20px;
     position: sticky;
     top: 0;
+    z-index: 10;
 }
-
 nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 40px;
 }
-
 nav a {
     color: #ffffff;
     text-decoration: none;
     font-weight: bold;
 }
-
 nav a:hover {
     text-decoration: underline;
 }
-
-/* Sobre mim */
-#sobre {
+/* Apresentação */
+#inicio {
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 60px;
-    padding: 60px 8%;
+    justify-content: space-between;
+    gap: 40px;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 54px 8% 38px;
 }
-
+.sobre-foto { flex-shrink: 0; }
 .sobre-foto img {
-    width: 320px;
-    height: 320px;
+    display: block;
+    width: 240px;
+    height: 240px;
     object-fit: cover;
     border-radius: 50%;
     border: 6px solid #ffffff;
-    box-shadow: 0 0 25px rgba(29, 95, 168, 0.35);
+    box-shadow: 0 0 25px rgba(29, 95, 168, 0.20);
 }
-
-.sobre-texto {
-    max-width: 520px;
+.sobre-texto { min-width: 0; }
+.saudacao { color: #1d5fa8; font-size: 1.1rem; }
+.sobre-texto h1 { font-size: clamp(2.5rem, 5.5vw, 4rem); line-height: 1.15; }
+.cargo { color: #52677b; font-size: 1.3rem; margin: 6px 0 22px; }
+.hero-links { display: flex; flex-wrap: wrap; gap: 12px; }
+.hero-links a { color: #1d5fa8; text-decoration: none; font-weight: bold; }
+.hero-links a:hover { text-decoration: underline; }
+#sobre.sobre-mim {
+    max-width: 900px;
+    margin: 0 auto 20px;
+    padding: 18px 24px 10px;
 }
-
-.saudacao {
-    font-size: 1.3rem;
-}
-
-.sobre-texto h1 {
-    font-size: 2.6rem;
-    line-height: 1.2;
-}
-
-.curso {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #1d5fa8;
-    margin: 8px 0 16px;
-}
-
-/* Projetos e contato (estilo simples por enquanto) */
+.sobre-mim h2 { font-size: 1.4rem; }
+.sobre-mim p { color: #425466; }
+/* Seções */
 .secao {
     padding: 40px 8%;
 }
-
 .secao h2 {
     color: #1d5fa8;
     margin-bottom: 12px;
 }
-
 .secao ul {
     list-style: none;
 }
-
 .secao li {
     margin-bottom: 16px;
 }
-
 .secao a {
     color: #1d5fa8;
 }
-
+/* Formação e conhecimentos — layout compacto */
+.curriculo-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 24px 32px;
+}
+.curriculo-card {
+    background: #ffffff;
+    border: 1px solid #c9dcef;
+    border-radius: 12px;
+    padding: 18px 20px;
+    min-width: 0;
+}
+.curriculo-card h2 {
+    color: #1d5fa8;
+    font-size: 1.25rem;
+    margin-bottom: 12px;
+}
+.formacao-lista, .conhecimentos-lista { list-style: none; }
+.formacao-lista h3 { font-size: 1rem; color: #1f2d3d; }
+.formacao-lista p { font-size: .9rem; color: #425466; margin-top: 4px; }
+.conhecimentos-lista { display: flex; flex-wrap: wrap; gap: 7px; }
+.conhecimentos-lista li {
+    background: #eef5fb;
+    color: #1d5fa8;
+    border: 1px solid #c9dcef;
+    border-radius: 6px;
+    padding: 4px 10px;
+    font-size: .85rem;
+}
+@media (max-width: 650px) {
+    .curriculo-grid { grid-template-columns: 1fr; padding: 0 6% 24px; }
+}
 /* Projetos */
 #projetos {
     background-color: #ffffff;
     text-align: center;
     padding: 50px 8%;
 }
-
 #projetos h2 {
     font-size: 2.2rem;
     margin-bottom: 32px;
 }
-
 .projetos-lista {
     display: flex;
     justify-content: center;
@@ -120,7 +141,6 @@ nav a:hover {
     max-width: 1100px;
     margin: 0 auto;
 }
-
 .card {
     flex: 1 1 280px;
     max-width: 340px;
@@ -132,25 +152,21 @@ nav a:hover {
     border-radius: 12px;
     padding: 24px;
 }
-
 .card h3 {
     font-size: 1.1rem;
     color: #1d5fa8;
     margin-bottom: 10px;
 }
-
 .card p {
     font-size: 0.95rem;
     margin-bottom: 20px;
 }
-
 .card-links {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
     margin-top: auto;
 }
-
 .card .botao {
     padding: 8px 18px;
     border: 2px solid #1d5fa8;
@@ -161,19 +177,18 @@ nav a:hover {
     font-weight: bold;
     text-decoration: none;
 }
-
 .card .botao.contorno {
     background-color: transparent;
     color: #1d5fa8;
 }
-
 .card .botao:hover {
     background-color: #17497f;
     border-color: #17497f;
     color: #ffffff;
 }
-
-
+#contato a {
+    overflow-wrap: anywhere;
+}
 /* Rodapé */
 footer {
     background-color: #1d5fa8;
@@ -181,26 +196,56 @@ footer {
     text-align: center;
     padding: 16px;
 }
-
 /* Celular e tablet */
 @media (max-width: 800px) {
     nav ul {
-        gap: 20px;
+        gap: 12px 20px;
     }
-
-    #sobre {
-        flex-direction: column;
+    #inicio {
+        flex-direction: column-reverse;
         text-align: center;
         gap: 28px;
         padding: 40px 6%;
     }
-
     .sobre-foto img {
-        width: 240px;
-        height: 240px;
+        width: 200px;
+        height: 200px;
+        max-width: 100%;
     }
-
     .sobre-texto h1 {
-        font-size: 2rem;
+        font-size: 2.6rem;
     }
+    .hero-links { justify-content: center; }
+    #sobre.sobre-mim { padding: 12px 6%; }
 }
+@media (max-width: 480px) {
+    html { scroll-padding-top: 125px; }
+    nav ul { gap: 8px 14px; }
+    nav a { font-size: 0.9rem; }
+    #projetos h2 { font-size: 1.8rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+}
+
+/* Layout claro inspirado no modelo de referência */
+main { max-width: 1080px; margin: 0 auto; padding: 0 28px; }
+#inicio { max-width: none; padding: 42px 12px 34px; }
+.sobre-foto img { width: 220px; height: 220px; border: 3px solid #1d5fa8; box-shadow: none; }
+#sobre.sobre-mim { max-width: none; margin: 0 0 16px; padding: 20px 24px; background: #fff; border: 1px solid #c9dcef; border-radius: 12px; }
+.sobre-mim p { font-size: .96rem; }
+.curriculo-grid { display: flex; flex-direction: column; max-width: none; gap: 16px; padding: 0; margin: 0 0 22px; }
+.curriculo-card { padding: 18px 24px; }
+#conhecimentos { background: transparent; border: 0; padding: 0 4px; }
+.conhecimentos-lista { gap: 10px; }
+.conhecimentos-lista li { background: #fff; padding: 10px 15px; flex: 1 1 auto; text-align: center; }
+#projetos { background: transparent; padding: 0 4px 24px; text-align: left; }
+#projetos h2 { font-size: 1.4rem; margin-bottom: 14px; }
+.projetos-lista { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+.card { background: #fff; max-width: none; padding: 18px; }
+.card h3 { font-size: 1rem; }
+.card .botao { padding: 7px 12px; font-size: .83rem; }
+#contato { padding: 20px 24px; background: #fff; border: 1px solid #c9dcef; border-radius: 12px; margin-bottom: 24px; }
+.sobre-mim h2, .curriculo-card h2, #contato h2 { font-size: 1.4rem; }
+@media (max-width: 800px) { main { padding: 0 18px; } #inicio { padding: 32px 0; } .projetos-lista { grid-template-columns: repeat(2,minmax(0,1fr)); } .sobre-foto img { width: 190px; height: 190px; } }
+@media (max-width: 560px) { .projetos-lista { grid-template-columns: 1fr; } #sobre.sobre-mim, .curriculo-card, #contato { padding: 16px; } #conhecimentos { padding: 0; } }
